@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn JS</title>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <!-- Acesta e un comentariu -->
+    <h1 id="titlu">JS Curs 5</h1>
+    <div>
+      <p id="paragraf">Acesta este un paragraf!</p>
+      <div>
+        <p class="paragrafDoi">
+          Quis adipisicing voluptate laboris commodo voluptate esse consectetur
+          tempor. Culpa fugiat sunt Lorem fugiat ipsum amet. Aute veniam commodo
+          incididunt fugiat irure excepteur cupidatat aliquip veniam ullamco
+          veniam officia tempor. Cillum minim nostrud sunt minim non.
+        </p>
+        <p class="paragrafDoi">
+          Quis adipisicing voluptate laboris commodo voluptate esse consectetur
+          tempor.
+        </p>
+      </div>
+      <a id="link" href="https://skillbrain.com/">Click me!</a>
+      <button id="button" onclick="schimbaCuloareText()">Click here!</button>
+    </div>
+    <script>
+      //Schimbare text paragraf
+      let primulParagraf = document.getElementById("paragraf");
+      primulParagraf.innerHTML = "Primul paragraf din proiect!!!!!";
+
+      // schimbare culoare link
+      let link = document.getElementById("link");
+      link.style.color = "red";
+      link.style.fontWeight = "bold";
+
+      // schimbare text
+      let primulParagrafDinArray =
+        document.getElementsByClassName("paragrafDoi")[0];
+      let arrayParagrafe = document.getElementsByClassName("paragrafDoi");
+      console.log(arrayParagrafe);
+      Array.from(arrayParagrafe).forEach((element) => console.log(element));
+      Array.from(arrayParagrafe).forEach(
+        (element) =>
+          (element.innerHTML =
+            "Modificare a textului - paragraf 1 in array!!!!!")
+      );
+      //   for (let paragraf of arrayParagrafe) {
+      //     paragraf.innerHTML = "Modificare a textului - paragraf 1 in array";
+      //   }
+      //   arrayParagrafe.innerHTML = "Modificare a textului - paragraf 1 in array";
+
+      //Modificare culoare si schimbat text pe button
+      function schimbaCuloareText() {
+        primulParagraf.style.color = "purple";
+      }
+    </script>
+  </body>
+</html>
